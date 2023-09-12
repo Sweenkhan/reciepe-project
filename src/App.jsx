@@ -14,9 +14,10 @@ function App() {
       <Router >
         <Route  path="/" element={<Home />}> </Route>  
         <Route  path="/reciepe" element={<Reciepe />}></Route> 
-        {/* <Route  path="/category" element={<Category />}></Route>  */}
-        {/* <Route  path="/sign-up" element={<Register />}></Route> 
-        <Route  path="/login" element={<Login />}></Route>  */}
+        
+        <Route  path="/category" element={<Category />}></Route> 
+        <Route  path="/sign-up" element={<Register />}></Route> 
+        <Route  path="/login" element={<Login />}></Route>  
          
       </Router>
     </BrowserRouter> 
