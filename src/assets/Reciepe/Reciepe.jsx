@@ -20,25 +20,32 @@ function Reciepe() {
   const [youtubeLink, setYoutubeLink] = useState("") 
   const [mealImage, setMealImage] = useState("")
 
+ 
+  const [allImages, setAllImages] = useState([]) 
+
+
+
+  //-------------------------------------------FETCHING DATA FROM API BY CATEGORY--------------------------//
 
   useEffect(() => {
 
     axios.get("https://www.themealdb.com/api/json/v1/1/categories.php")
       .then((result) => { 
         setCategories(result.data.categories)
+         console.log(result.data.categories[0].strCategoryThumb) 
       })
 
   }, []);
 
-
-  useEffect(() => {
-    // axios.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52720")
+ 
+//------------------------------------FETCHING DATA WITH ID----------------------------//
+  useEffect(() => { 
     axios.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52867")
       .then(async (result) => { 
-
-
+ 
         const allDetail = result.data.meals[0]
         console.log(allDetail)
+
         setMealId(allDetail.idMeal)
         setArea(allDetail.strArea)
         setCategory(allDetail.strCategory)
@@ -54,11 +61,11 @@ function Reciepe() {
 
 
 
-  //filter data
+  //-----------------------------------------SETTING INGREDIENT AND MESUREMENT IN AN ARRAY----------------------------
   function filtering(alldata) {
     for (let data in alldata) {
      
-     //adding data in ingredient array-------------------//
+     //adding data in ingredient array
       if (data.slice(0, 13) === "strIngredient") {
 
         if (alldata[data] === "") { 
@@ -74,7 +81,7 @@ function Reciepe() {
 
       }
 
-      //addind data in measurements array--------------  //
+      //addind data in measurements array------------
       else if (data.slice(0, 10) === "strMeasure") {
 
         if (alldata[data] === "") {
@@ -96,7 +103,7 @@ function Reciepe() {
 
 
 
-
+  //----------------------------SENDING ALL RECIEPE DATA TO BACKEND------------------------// 
   function handleClick(e) {
     e.preventDefault()
 
@@ -105,14 +112,35 @@ function Reciepe() {
         console.log(result.data.message)
         console.log("eveythin is going fine.")
       })
+
+
+      //------SETING DATA FOR CATEGORY ---------
+      // categories.map((images ) => { 
+      //  setAllImages((allImages) => {
+      //       return   [...allImages, {name: images.strCategory, image: images.strCategoryThumb}]
+      //   }) 
+      // })  
+
   }
  
+
+
+  //----------------------------SENDING CATEGORY DATA TO BACKEND------------------------//
+  function sendImages(){
+
+    axios.post("http://localhost:8000/images", {allImages})
+    .then((result) => {
+           console.log(result.data.message)
+    })
+  }
+
 
 
   return (
     <div className="reciepeCnt">
       <h2>This is the reciepe page.</h2>
-      <button onClick={handleClick}>Click ME</button>
+      <button onClick={handleClick} desabled="true">Click ME</button>
+      <button onClick={sendImages} desabled="true" >sendImages</button>
       {
         categories.map((categ, index) => {
           return <div key={index}>
