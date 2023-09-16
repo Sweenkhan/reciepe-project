@@ -33,7 +33,7 @@ function Reciepe() {
 
   useEffect(() => {
     // axios.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52720")
-    axios.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52780")
+    axios.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52867")
       .then(async (result) => { 
 
 
@@ -44,7 +44,7 @@ function Reciepe() {
         setCategory(allDetail.strCategory)
         setInstruction(allDetail.strInstructions)
         setReciepeName(allDetail.strMeal)
-        setYoutubeLink(allDetail.strYoutube) 
+        setYoutubeLink(allDetail.strYoutube || "don't have") 
         setMealImage(allDetail.strMealThumb)
         setMeasurMents("")
         setIngredients("")
@@ -100,16 +100,13 @@ function Reciepe() {
   function handleClick(e) {
     e.preventDefault()
 
-    axios.post("http://localhost:8000/home", { mealId, area, category, ingredients, measurMents, instruction, reciepeName, youtubeLink,  mealImage })
+    axios.post("http://localhost:8000/reciepe", { mealId, area, category, ingredients, measurMents, instruction, reciepeName, youtubeLink,  mealImage })
       .then((result) => {
         console.log(result.data.message)
         console.log("eveythin is going fine.")
       })
   }
-
-
-  console.log(ingredients)
-  console.log(measurMents)
+ 
 
 
   return (
