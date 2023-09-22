@@ -62,6 +62,7 @@ useEffect(() => {
         }
 
       }
+      
 
       //addind data in measurements array------------
       else if (data.slice(0, 10) === "strMeasure") {
@@ -78,7 +79,6 @@ useEffect(() => {
           )
         } 
       } 
-
 
     }
   }
@@ -125,7 +125,7 @@ useEffect(() => {
     <button onClick={handleClick} desabled="true">Click ME</button>
       <button onClick={sendImages} desabled="true" >sendImages</button>
       </div>
-      
+
   )
 }
 
