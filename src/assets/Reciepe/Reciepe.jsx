@@ -24,8 +24,6 @@ function Reciepe() {
   }, []);
 
  
- 
-
   return (
     <div className="reciepeCnt">
       <h2>This is the reciepe page.</h2> 
