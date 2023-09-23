@@ -42,7 +42,6 @@ useEffect(() => {
   }, [])
 
 
-
   //-----------------------------------------SETTING INGREDIENT AND MESUREMENT IN AN ARRAY----------------------------
   function filtering(alldata) {
     for (let data in alldata) {
