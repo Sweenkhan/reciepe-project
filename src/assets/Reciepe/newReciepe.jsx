@@ -103,8 +103,6 @@ useEffect(() => {
       // })  
 
   }
- 
-
 
   //----------------------------SENDING CATEGORY DATA TO BACKEND------------------------//
   function sendImages(){
