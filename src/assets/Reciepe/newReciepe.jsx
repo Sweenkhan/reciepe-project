@@ -120,8 +120,9 @@ useEffect(() => {
     <h2>This page is for reciepe send to backend </h2> 
     
     <button onClick={handleClick} desabled="true">Click ME</button>
-      <button onClick={sendImages} desabled="true" >sendImages</button>
-      </div>
+    <button onClick={sendImages} desabled="true" >sendImages</button>
+    
+    </div>
 
   )
 }
