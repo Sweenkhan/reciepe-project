@@ -3,8 +3,8 @@ import Reciepe from '../Reciepe/Reciepe.jsx'
 
 function Home() {
   return (
-    <div className='home'>
-        <Reciepe />
+    <div className='home' >
+        <h2>How are you nikki</h2>
     </div>
   )
 }

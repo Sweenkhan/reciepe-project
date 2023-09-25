@@ -4,24 +4,23 @@ import axios from 'axios'
 
 
 function Reciepe() {
+ 
 
-  // idMeal: '52770', strMeal: 'Spaghetti Bolognese', strDrinkAlternate: null, strCategory
-  // mealId, area, category, ingredients, measurMents, instruction, reciepeName, youtubeLink, strTags, mealImage
-  const [categories, setCategories] = useState([])
-
+  // const [categories, setCategories] = useState([])
+  const [reciepes, setReciepes] = useState([])
  
 
   //-------------------------------------------FETCHING DATA FROM API BY CATEGORY--------------------------//
 
   useEffect(() => {
 
-    axios.get("https://www.themealdb.com/api/json/v1/1/categories.php")
+    axios.get("http://localhost:8080/getAllBooks")
       .then((result) => { 
-        setCategories(result.data.categories)
-         console.log(result.data.categories[0].strCategoryThumb) 
+       console.log(result.data.message)
       })
 
   }, []);
+
 
  
   return (
