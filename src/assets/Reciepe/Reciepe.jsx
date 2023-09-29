@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-
+import { useContext } from 'react';
+import { createContextReciepe } from '../../App';
 
 
 function Reciepe() {
  
-
-  // const [categories, setCategories] = useState([])
-  const [reciepes, setReciepes] = useState([])
  
-
+  const {allCategoryData, setAllCategoryData} = useContext(createContextReciepe) 
 
   //-------------------------------------------FETCHING DATA FROM API BY CATEGORY--------------------------// 
   useEffect(() => {
@@ -17,6 +15,7 @@ function Reciepe() {
     axios.get("http://localhost:8000/getAllCategory")
       .then((result) => { 
        console.log(result.data.message)
+       setAllCategoryData(result.data)
       })
 
   }, []);
