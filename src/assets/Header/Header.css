@@ -4,4 +4,13 @@
     justify-content: center;
 }
 
- 
+.header, .headerUI{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.headerUI{
+    flex-direction: row;
+}

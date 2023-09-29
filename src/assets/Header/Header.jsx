@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className="header">
       <h2>Meal</h2>
-      <ul className='headerUl'>
+      <ul className='headerUI'>
         <li><Link to="/about">About</Link></li>
         {/* <li><Link to="/category">Category</Link></li> */}
         <li><Link to="/reciepe">Reciepe</Link></li>
