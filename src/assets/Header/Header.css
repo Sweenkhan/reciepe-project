@@ -4,6 +4,11 @@
     justify-content: center;
 }
 
+.header {
+    background-color: #008844;
+    width: 100%;
+}
+
 .header, .headerUI{
     display: flex;
     /* align-items: center; */
