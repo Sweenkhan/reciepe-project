@@ -7,11 +7,10 @@ import {Link} from "react-router-dom"
 function Header() {
   return (
     <div className="header">
-      <h2>Meal</h2>
+      <h2>KHANRECIEPE</h2>
       <ul className='headerUI'>
-        <li><Link to="/about">About</Link></li>
-        {/* <li><Link to="/category">Category</Link></li> */}
-        <li><Link to="/reciepe">Reciepe</Link></li>
+        <li><Link to="/about">About</Link></li> 
+        <li><Link to="/reciepe">Reciepes</Link></li>
         <li><Link to="/sign-up">Sign-up</Link></li>
       </ul>
     </div>
