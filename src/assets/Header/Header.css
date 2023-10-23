@@ -5,8 +5,12 @@
 }
 
 .header {
-    background-color: #008844;
-    width: 100%;
+    background-color: #5c176b; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    columns: white;
 }
 
 .header, .headerUI{
