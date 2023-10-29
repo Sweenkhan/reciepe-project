@@ -9,11 +9,12 @@
    height: 55vh;
    width: 100vw;
    position: absolute;
-   top: 30px;
+   top: 40px;
    z-index: -5;
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
+   /* object-fit: cover; */
 }
 
 .homeImg::after{
@@ -24,3 +25,37 @@
     background-color: rgba(0, 0, 0, 0.397);
     z-index: -4;
 }
+
+
+.home .typeWriter{
+    position: absolute;
+    top: 12rem;
+    z-index: 2;
+    background-color: red;
+}
+
+.home .mainPageContent{ 
+    position: absolute;
+    z-index:2; 
+    top: 18rem;
+    font-size: 1.5rem; 
+    width: 60%;
+    font-weight: 500;
+    left: 20%;
+}
+.home .mainPageContent p{
+    font-size: 1.5rem;
+    background-color: white; 
+    font-weight: 500; 
+    padding: 1rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.797);
+    border-radius: 5px;
+    word-spacing: 3px;
+    transition: all 0.3s;
+}
+
+.home .mainPageContent p:hover { 
+    box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.797);
+    top: 17.5rem;  
+}
+
