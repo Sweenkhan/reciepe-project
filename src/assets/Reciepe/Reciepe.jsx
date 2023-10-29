@@ -1,6 +1,5 @@
 import React from 'react' 
-import Allcategory from './Allcategory'
-import { Outlet } from 'react-router-dom'
+import Allcategory from './Allcategory' 
 import CategoryRecipe from './categoryReciepe/CategoryRecipe'
 
 
@@ -8,8 +7,7 @@ function Reciepe() {
   
   return (
      <>
-      <CategoryRecipe />
-      <Outlet />
+      <h1>how r u</h1>
      </>
 
   )

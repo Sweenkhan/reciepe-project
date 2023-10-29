@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useContext } from 'react';
 import { createContextReciepe } from '../../App';
 import {useNavigate } from 'react-router-dom';
+import "./Allcategory.css"
 
  
  
@@ -42,7 +43,7 @@ function Allcategory() {
  
   return (
 
-    <div>
+    <div className='allcategory'>
     <h2>Allcategory</h2>
     <div className="reciepeCnt">
       <h2>This is the reciepe page.</h2> 

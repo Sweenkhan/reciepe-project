@@ -27,13 +27,11 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/reciepe" element={<Reciepe />}>
-              <Route index path="allcategory" element={<Allcategory />} />
-              <Route path="categoryReciepe" element={<CategoryRecipe />} />
-            </Route>
-
-            {/* <Route  path="/category" element={<Category />}></Route>  */}
+            <Route path="/reciepe" element={<Reciepe />}></Route>
+              <Route  path="/allcategory" element={<Allcategory />} />
+              <Route path="/categoryReciepe" element={<CategoryRecipe />} /> 
             {/* <Route  path="/sign-up" element={<Register />}></Route>  */}
+            {/* <Route  path="/category" element={<Category />}></Route>  */}
             {/* <Route  path="/login" element={<Login />}></Route>   */}
           </Routes>
         </BrowserRouter>

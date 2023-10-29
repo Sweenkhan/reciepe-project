@@ -1,0 +1,26 @@
+ .home{
+    display: flex;
+    background-color: red;
+    margin-top: 10px;
+    position: relative;
+ }
+
+.homeImg{
+   height: 55vh;
+   width: 100vw;
+   position: absolute;
+   top: 30px;
+   z-index: -5;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.homeImg::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    z-index: -4;
+}

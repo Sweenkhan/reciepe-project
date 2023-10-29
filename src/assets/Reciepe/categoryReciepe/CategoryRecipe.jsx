@@ -11,7 +11,7 @@ function CategoryRecipe() {
     <div>
       <h2>This is category data page.</h2>
 
-
+      
     </div>
   );
 }
