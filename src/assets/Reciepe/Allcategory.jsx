@@ -45,8 +45,7 @@ function Allcategory() {
 
     <div className='allcategory'>
     <h2>Allcategory</h2>
-    <div className="reciepeCnt">
-      <h2>This is the reciepe page.</h2> 
+    <div className="reciepeCnt"> 
       { (allCategoryData.length > 0) &&
         allCategoryData.map((categ, index) => {
           return <div key={index}>
