@@ -7,7 +7,8 @@ function Reciepe() {
   
   return (
      <>
-      <h1>how r u</h1>
+      <h1>how are youy</h1>
+      <Allcategory />
      </>
 
   )

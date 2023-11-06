@@ -1,6 +1,6 @@
-/* .allcategory{
-    background-image: url("../Images/main-bg.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
+.allcategory {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
