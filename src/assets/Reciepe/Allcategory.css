@@ -4,3 +4,11 @@
     justify-content: center;
 }
 
+.allcategory .reciepeCnt{
+    background-color: rgba(204, 196, 196, 0.74);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

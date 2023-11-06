@@ -43,18 +43,15 @@ function Allcategory() {
  
   return (
 
-    <div className='allcategory'> 
-    <div className="reciepeCnt"> 
+    <div className='allcategory'>  
       { (allCategoryData.length > 0) &&
         allCategoryData.map((categ, index) => {
-          return <div key={index}>
+          return <div key={index} className='reciepeCnt'>
             <h2>{categ.categoryName}</h2>
             <img onClick={e => {handleFecthData(e, categ.categoryName)}} src={categ.categoryImg} alt="main-img" />
           </div>
         })
-      }
-    </div>
-    
+      } 
     </div>
 
   )

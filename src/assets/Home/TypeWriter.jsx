@@ -17,7 +17,7 @@ import  Typewriter from "typewriter-effect";
   .typeString('gourmet recipes.') 
    .pauseFor(2500)
    .deleteAll() 
-   .typeString('homemade delights.') 
+   .typeString('homemade delight.') 
    .pauseFor(2500)
    .deleteAll() 
    .start();
