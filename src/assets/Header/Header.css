@@ -1,5 +1,4 @@
- 
-.header {
+ .header {
     /* background-color: #702181;  */
     background-color: #009b4d;
     position: fixed;
@@ -23,6 +22,7 @@
     justify-content: space-between;
     flex-direction: row;
 }
+
 
 .headerUl li{
     list-style-type: none;
