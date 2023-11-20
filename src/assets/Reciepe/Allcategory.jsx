@@ -5,8 +5,6 @@ import { createContextReciepe } from '../../App';
 import {useNavigate } from 'react-router-dom';
 import "./Allcategory.css"
 
- 
- 
 function Allcategory() {
 
   const {allCategoryData, setAllCategoryData} = useContext(createContextReciepe) 
