@@ -9,7 +9,7 @@
  }
 
  .homeImg {
-     height: 49vh;
+     height: 51vh;
      width: 100vw;
      position: absolute;
      top: 40px;
@@ -91,11 +91,12 @@
 
  .home .mainPageList .allcategory .reciepeCnt{
     background-color: #618264;
-    margin-right: 10px;
+    margin-top: 15px; 
     border-radius: 10px;
     padding-top: 10px;
     cursor: pointer;
  }
+
 
  .home .mainPageList .allcategory .reciepeCnt:hover{
     background-color: #82b186;
