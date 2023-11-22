@@ -25,13 +25,17 @@
     position: absolute;
     width: 100%;
     height: 100%; 
-    /* z-index: 2; */
-    box-shadow: inset 10px -5px 40px rgba(0, 0, 0, 0.74);
+    z-index: 2;
+    box-shadow: inset 10px -5px 100px rgba(0, 0, 0, 0.74);
     border-radius: 7px;
 }
 
 .allcategory .reciepeCnt:hover{
     background-color: rgba(204, 186, 186, 0.54);
     color: green;
-    /* z-index: 5; */
+  
+}
+
+.allcategory .reciepeCnt:hover::after{
+    z-index:-5;
 }

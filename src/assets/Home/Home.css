@@ -94,14 +94,17 @@
     border-radius: 10px;
     padding-top: 10px;
     cursor: pointer;
+    position: relative;
+    z-index: 5;
  }
 
 
  .home .mainPageList .allcategory .reciepeCnt:hover{
     background-color: #82b186;
     color: white;
+    /* z-index: 5; */
  }
 
  .home .mainPageList .allcategory .reciepeCnt img{
-    border-radius: 8px;
+    border-radius: 7px;
  }
