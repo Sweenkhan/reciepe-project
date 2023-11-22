@@ -5,11 +5,15 @@
      justify-content: center;
      align-items: center;
      padding: 10px;  
+     height: 100vh;
+     /* background-color: #618264; */
+     background-color: rgb(228, 213, 213);
+     z-index: -3;
  }
 
  .homeImg {
-     height: 51vh;
-     width: 100vw;
+     height: 94vh;
+     width: 100%;
      position: absolute;
      top: 40px;
      /* left: 0; */
@@ -31,19 +35,7 @@
      z-index: -4;
  }
 
-
-
-
- .home .mainPageContent {
-     position: absolute;
-     z-index: 2;
-     top: 13rem;
-     font-size: 1.5rem; 
-     font-weight: 500;
-     left: 20%;
-     transition: all 0.3s;
- }
-
+ 
  .home .typeWriter {
      padding: 10px;
      margin-top: 5%;
@@ -54,8 +46,19 @@
 
  }
 
+ .home .mainPageContent {
+    position: absolute;
+    z-index: 20;
+    top: 12em;
+    font-size: 1.5rem; 
+    font-weight: 500;
+    /* left: 0; */
+    width: 61%;
+    transition: all 0.3s;
+}
+
  .home .mainPageContent p {
-     font-size: 1.5rem;
+     font-size: 1rem;
      background-color: white;
      font-weight: 500;
      padding: 1rem;
@@ -73,8 +76,10 @@
 
  .home .mainPageList{ 
     position: relative;
-     top: 22em;
+     top: 12em;
      left: 0;
+     width: 334px;
+     overflow: hidden; 
  }
 
  .home .mainPageList .allcategory {
@@ -84,8 +89,38 @@
      flex-direction: column;
      flex-wrap: wrap; 
      height: 17rem;  
-     overflow-x: scroll;
-     overflow-y: hidden;  
+     /* overflow-x: scroll; */
+     /* overflow-y: hidden;   */
+     width: 100%;
+     position: relative;
+     left: 0;
+     animation: slidebar 41s 3s infinite;
+ }
+
+ @keyframes slidebar{
+   0%, 100%{
+    left: 0;
+   }5%, 10%{
+    left: -334px;
+   }15%, 20%{
+    left: -668px;
+   }25%, 30%{
+    left: -1002px;
+   }35%, 40%{
+    left: -1336px;
+   }45%, 50%{
+    left: -1670px;
+   }55%, 60%{
+    left: -2004px;
+   }65%, 70%{
+    left: -2338px;
+   }75%, 80%{
+    left: -2672px;
+   }85%, 90%{
+    left: -3006px;
+   }95%, 100%{
+    left: -3340px;
+   }
  }
 
  .home .mainPageList .allcategory .reciepeCnt{
@@ -95,14 +130,19 @@
     padding-top: 10px;
     cursor: pointer;
     position: relative;
-    z-index: 5;
+    z-index: 1;
  }
 
 
  .home .mainPageList .allcategory .reciepeCnt:hover{
     background-color: #82b186;
     color: white;
-    /* z-index: 5; */
+    z-index: 5;
+ }
+
+
+ .home .mainPageList .allcategory .reciepeCnt::after{
+    opacity: 0;
  }
 
  .home .mainPageList .allcategory .reciepeCnt img{
