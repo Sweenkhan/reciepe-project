@@ -1,3 +1,8 @@
+ body{
+    background-color: rgb(228, 213, 213); 
+
+ }
+ 
  .home {
      display: flex;
      margin-top: 10px;
@@ -7,12 +12,13 @@
      padding: 10px;  
      height: 100vh;
      /* background-color: #618264; */
-     background-color: rgb(228, 213, 213);
+     /* background-color: rgb(228, 213, 213);   */
      z-index: -3;
  }
 
+
  .homeImg {
-     height: 94vh;
+     height: 100vh;
      width: 100%;
      position: absolute;
      top: 40px;
@@ -23,6 +29,7 @@
      background-repeat: no-repeat;
      /* object-fit: cover; */
  }
+
 
  .homeImg::after {
      content: "";
@@ -76,7 +83,7 @@
 
  .home .mainPageList{ 
     position: relative;
-     top: 12em;
+     bottom: -11.5em;
      left: 0;
      width: 334px;
      overflow: hidden; 
@@ -131,6 +138,7 @@
     cursor: pointer;
     position: relative;
     z-index: 1;
+    animation: none;
  }
 
 
