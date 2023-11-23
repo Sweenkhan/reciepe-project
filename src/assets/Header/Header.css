@@ -17,6 +17,12 @@
  }
 
 
+ .header h2 a{
+   text-decoration: none;
+   color: white;
+ }
+
+
  .header .headerRight {
      display: flex;
      padding: 2px;
@@ -42,18 +48,19 @@
  .headerRight form .closeInput {
      padding: 0 0.5rem;
      border: none;
-     width: 28px;
+     width: 34px;
      border: none;
      transition: all 0.5s;
      font-size: 1.2rem;
     outline: none;
-    padding: 0 0.5rem;  
+    padding: 0 0.5rem; 
+    height: 100%; 
  }
 
 
  .headerRight form .showInput {
      background-color: white;
-     width: 250px;
+     width: 270px;
      transition: all 0.5s;
      padding: 0 0.5rem;
      font-size: 1.2rem;
@@ -69,29 +76,27 @@
  .headerRight form span {
      position: absolute;
      right: 10px;
-     height: 99%;
-     border-top-right-radius: 3px;
-     border-bottom-right-radius: 3px;
+     height: 99%; 
      background-color: #009b4d;
      margin-left: 10px;
+     cursor: pointer;
+     padding-left: 4px;
  }
 
  .headerRight form .search {
      font-size: 2rem;
-     padding-top: 2px;
+     padding: 3px 2px 2px;
  }
  
 
- .headerRight form .closeInput {
-     width: 250x;
-
- }
+  
 
  .header .headerUl {
      display: flex;
      /* align-items: center; */
      justify-content: space-between;
      flex-direction: row;
+     margin-right: 10px;
  }
 
 

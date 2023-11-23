@@ -5,6 +5,7 @@
     margin: 10px 0; 
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .allcategory .reciepeCnt{

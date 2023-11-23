@@ -21,11 +21,11 @@ function Header() {
 
   return (
     <div className="header">
-      <h2>QRECIEPE</h2>
-      <div className="headerRight"  onMouseEnter={() => handlonMouseOver()} onMouseLeave={handlonMouseOut} >
+      <h2><Link to={"/"}>QRECIEPE</Link></h2>
+      <div className="headerRight"  >
       <div className="formDiv"> 
-        <form>
-          <input type="text" className={(showsearchInput) ? "showInput" : "closeInput" } />
+        <form onMouseEnter={() => handlonMouseOver()} onMouseLeave={handlonMouseOut} >
+          <input type="text" className={(showsearchInput) ? "showInput" : "closeInput" } placeholder="Search..."/>
           <span> <SearchIcon className="search"/></span>
         </form>
         </div>
