@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { createContextReciepe } from '../../../App'
 import RecipeData from './RecipeData'
+import "./ChoosenCategory.css"
 
 
 
@@ -19,7 +20,7 @@ console.log(selectedCatagoryData)
      {
         selectedCatagoryData.map((data, index) => {
             return (
-                <div key={index}>
+                <div key={index} className='choosenCat'>
                 <h2>{data.reciepeName}</h2>
                 <img src={data.mealImage} alt="categoryImg" />
                 </div>

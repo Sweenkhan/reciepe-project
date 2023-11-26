@@ -1,0 +1,32 @@
+.choosenCategory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.choosenCategory .choosenCategoryCnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.choosenCategory .choosenCategoryCnt .choosenCat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 270px;
+}
+
+.choosenCategoryCnt .choosenCat h2{
+    font-size: 1.3rem;
+}
+
+.choosenCategoryCnt .choosenCat img{
+    width: 260px;
+    height: 250px;
+}
