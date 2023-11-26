@@ -14,15 +14,18 @@
      color: white;
      font: 1.1rem sans-serif;
      font-family: Arial, Helvetica, sans-serif;
- }
-
-
- .header h2 a{
+    }
+    
+    .header h2{
+        position: relative; 
+    }
+    
+    .header h2 a{
    text-decoration: none;
    color: white;
- }
+ } 
 
-
+ 
  .header .headerRight {
      display: flex;
      padding: 2px;

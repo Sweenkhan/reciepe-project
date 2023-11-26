@@ -7,17 +7,16 @@ import "./Allcategory.css"
 
 function Allcategory() {
 
-  const {allCategoryData, setAllCategoryData} = useContext(createContextReciepe) 
+  const {allCategoryData, setAllCategoryData, selectedCatagoryData, setSelectedCatagoryData} = useContext(createContextReciepe) 
 
-  let navigate = useNavigate()
+  const navigate = useNavigate()
 
 
   //-------------------------------------------FETCHING DATA FROM API BY CATEGORY--------------------------// 
-  useEffect(() => {
-
+  useEffect(() => { 
     axios.get("http://localhost:8000/getAllCategory")
       .then((result) => { 
-       console.log(result.data.allCategory)
+      //  console.log(result.data.allCategory)
        setAllCategoryData(result.data.allCategory)
       })
 
@@ -32,15 +31,16 @@ function Allcategory() {
     axios.get(`http://localhost:8000/getSelectedCategory/${name}`)
       .then((result) => { 
        console.log(result.data.status) 
-       setAllCategoryData(result.data.selectedCatagoryData)
-       navigate("categoryReciepe")
+       setSelectedCatagoryData(result.data.selectedCatagoryData)
+       navigate("/choosenCategory")
       })
 
   }
 
+
+  console.log(selectedCatagoryData)
  
   return (
-
     <div className='allcategory'>  
       { (allCategoryData.length > 0) &&
         allCategoryData.map((categ, index) => {

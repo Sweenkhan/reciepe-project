@@ -8,7 +8,7 @@ function Header() {
 
   const [showsearchInput, setShowsearchInput] = useState(false)
 
-  console.log(showsearchInput)
+  // console.log(showsearchInput)
 
 
   function handlonMouseOver(){ 
@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <div className="header">
-      <h2><Link to={"/"}>QRECIEPE</Link></h2>
+      <h2 className="logo"><Link to={"/"}>QRECIEPE</Link></h2>
       <div className="headerRight"  >
       <div className="formDiv"> 
         <form onMouseEnter={() => handlonMouseOver()} onMouseLeave={handlonMouseOut} >

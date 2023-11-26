@@ -101,6 +101,7 @@
      position: relative;
      left: 0;
      animation: slidebar 41s 3s infinite;
+     padding-top: 0;
  }
 
  @keyframes slidebar{

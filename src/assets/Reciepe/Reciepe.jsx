@@ -1,6 +1,5 @@
 import React from 'react' 
-import Allcategory from './Allcategory' 
-import CategoryRecipe from './categoryReciepe/CategoryRecipe'
+import Allcategory from './Allcategory'  
 
 
 function Reciepe() {
