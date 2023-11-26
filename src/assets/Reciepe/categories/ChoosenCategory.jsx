@@ -21,8 +21,9 @@ console.log(selectedCatagoryData)
         selectedCatagoryData.map((data, index) => {
             return (
                 <div key={index} className='choosenCat'>
-                <h2>{data.reciepeName}</h2>
+                <h2>{data.reciepeName}</h2> 
                 <img src={data.mealImage} alt="categoryImg" />
+        
                 </div>
             )
         })
