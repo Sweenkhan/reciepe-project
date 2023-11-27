@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 function ChoosenCategory() {
 
 const {selectedCatagoryData, setRecipeData} = useContext(createContextReciepe) 
-console.log(selectedCatagoryData)
+// console.log(selectedCatagoryData)
 
 
 function handleRecipeData(e, data){
