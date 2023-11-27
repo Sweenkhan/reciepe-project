@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { createContextReciepe } from '../../../App'
 import RecipeData from './RecipeData'
 import "./ChoosenCategory.css"
+import { Link } from 'react-router-dom'
 
 
 
@@ -22,8 +23,10 @@ console.log(selectedCatagoryData)
             return (
                 <div key={index} className='choosenCat'>
                 <h2>{data.reciepeName}</h2> 
-                <img src={data.mealImage} alt="categoryImg" />
-        
+                <div className='image'><img src={data.mealImage} alt="categoryImg" /></div> 
+                <div className='visitCnt'>
+                   <h3><Link to="/recipeData">Visit for more info...</Link> </h3>
+                </div>
                 </div>
             )
         })

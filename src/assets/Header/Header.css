@@ -1,6 +1,6 @@
  .header {
      /* background-color: #702181;  */
-     background-color: #009b4d;
+     background-color: var(--primary);
      position: fixed;
      z-index: 20;
      left: 0;
@@ -14,18 +14,18 @@
      color: white;
      font: 1.1rem sans-serif;
      font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    .header h2{
-        position: relative; 
-    }
-    
-    .header h2 a{
-   text-decoration: none;
-   color: white;
- } 
+ }
 
- 
+ .header h2 {
+     position: relative;
+ }
+
+ .header h2 a {
+     text-decoration: none;
+     color: white;
+ }
+
+
  .header .headerRight {
      display: flex;
      padding: 2px;
@@ -55,9 +55,9 @@
      border: none;
      transition: all 0.5s;
      font-size: 1.2rem;
-    outline: none;
-    padding: 0 0.5rem; 
-    height: 100%; 
+     outline: none;
+     padding: 0 0.5rem;
+     height: 100%;
  }
 
 
@@ -69,7 +69,7 @@
      font-size: 1.2rem;
      outline: none;
      height: 100%;
-     border-radius: 5px; 
+     border-radius: 5px;
  }
 
  /* .headerRight form input:hover{
@@ -79,8 +79,8 @@
  .headerRight form span {
      position: absolute;
      right: 10px;
-     height: 99%; 
-     background-color: #009b4d;
+     height: 99%;
+     background-color: var(--primary);
      margin-left: 10px;
      cursor: pointer;
      padding-left: 4px;
@@ -90,9 +90,9 @@
      font-size: 2rem;
      padding: 3px 2px 2px;
  }
- 
 
-  
+
+
 
  .header .headerUl {
      display: flex;
@@ -113,7 +113,7 @@
  .headerUl li:hover {
      background-color: #13f126b0;
      background-color: white;
-     color: #009b4d;
+     color: var(--primary);
  }
 
 
@@ -125,5 +125,5 @@
  }
 
  .headerUl li:hover a {
-     color: #009b4d;
+     color: var(--primary);
  }
