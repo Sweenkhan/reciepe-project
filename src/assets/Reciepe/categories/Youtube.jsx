@@ -10,7 +10,7 @@ class Youtube extends React.Component {
 
   render() {
 
-    const { videoId, additionalOpts } = this.props;
+    const { id, additionalOpts } = this.props;
 
     const opts = {
       height: '390',
@@ -21,9 +21,11 @@ class Youtube extends React.Component {
       },
     };
 
+    console.log(id)
+
     return (
       <div>
-        <YouTube videoId={videoId} opts={opts} onReady={this._onReady} />
+        <YouTube videoId={id} opts={opts} onReady={this._onReady} />
       </div>
     );
   }

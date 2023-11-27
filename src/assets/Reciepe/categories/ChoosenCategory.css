@@ -8,7 +8,7 @@
 
 
 .choosenCategory .choosenCategoryCnt {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,8 @@
     height: 260px;
     padding: 5px;
     margin: 10px 10px 15px;
-    border: 1px solid rgba(82, 74, 74, 0.582);
+    border-bottom: 1px solid rgba(82, 74, 74, 0.582);
+    border-right: 1px solid rgba(82, 74, 74, 0.582);
     border-radius: 5px;
     position: relative;
     overflow: hidden;

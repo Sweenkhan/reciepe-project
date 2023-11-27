@@ -9,9 +9,16 @@ import { Link } from 'react-router-dom'
 
 function ChoosenCategory() {
 
-const {selectedCatagoryData} = useContext(createContextReciepe)
-
+const {selectedCatagoryData, setRecipeData} = useContext(createContextReciepe) 
 console.log(selectedCatagoryData)
+
+
+function handleRecipeData(e, data){
+   e.preventDefault();
+   setRecipeData(data)
+   console.log(data)
+}
+
 
 
   return (
@@ -25,7 +32,7 @@ console.log(selectedCatagoryData)
                 <h2>{data.reciepeName}</h2> 
                 <div className='image'><img src={data.mealImage} alt="categoryImg" /></div> 
                 <div className='visitCnt'>
-                   <h3><Link to="/recipeData">Visit for more info...</Link> </h3>
+                   <h3 onClick={(e) => {handleRecipeData(e, data)}}><Link to="/recipeData">Visit for more info...</Link> </h3>
                 </div>
                 </div>
             )
