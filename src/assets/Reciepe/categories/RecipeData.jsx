@@ -20,19 +20,9 @@ function RecipeData() {
   }
 
   let id = filteringId(recipeData) 
+  
 
-console.log(id)
-  // useEffect(() => {
-  //   let id = filteringId(recipeData)
-  //   if(id == false){
-  //     navigate("/")
-  // }else{
-  //    return id
-  // }
-  // },[])
-
-  //---------------------------removing measurMents from reciepeData-------------||
-
+  //---------------------------removing measurMents from reciepeData-------------|| 
   function filterMeasurMents(data) {
    
     let measurMents = data.measurMents;
@@ -42,40 +32,64 @@ console.log(id)
         filter.push(measurMents[i]);
       }
     }
-    return filter;
-    
+    return filter; 
   }
 
   let measurMents = filterMeasurMents(recipeData);
   // console.log(measurMents);
 
 
-  
+  //-----------------------setting instruction in an array---------------------||
+
+  function filterInstruction(data){
+    let instr = data.instruction.split(".");
+    return instr
+  }
+
+ let instruction =  filterInstruction(recipeData)
+ console.log(instruction)
 
   return (
     <div className="recipeDataCnt">
     <div className="data">
     <div className="leftRight">
       <div className="left">
-      <h2>{recipeData.reciepeName}</h2>
-      <p>ID: {recipeData.mealId}</p>
-      <p>Category: {recipeData.category}</p>
+      <h1>{recipeData.reciepeName}</h1>
+      
+      <div className="IdBox">
+        <p className="catBtn">{recipeData.category}</p>
+        <p>{recipeData.mealId}</p>
+      </div> 
+      <div className="recipeImg">
+        <img src={recipeData.mealImage} alt="rcpImg" />
+      </div>
       </div>
       <div className="right">
+      <h3>Ingredients</h3>
       <div className="ingredients"> 
       {(recipeData.ingredients) && recipeData.ingredients.map((imgSrc, index) => {
            return (
             <div  key={index} className="ingredient">
-            <p>{imgSrc}</p>
+            {/* <p>{imgSrc}</p> */}
             <img src={`http://www.themealdb.com/images/ingredients/${imgSrc}.png`} alt={imgSrc} ></img>
+            <p key={index}>{measurMents[index]} {imgSrc} </p>
             </div>
            ) 
       }) 
       }
       </div>
       </div>
-    </div>
-       
+    </div> 
+    <div className="instructionCnt">
+    <h2>Instruction</h2>
+      { (recipeData.ingredients) &&  
+        instruction.map((data, index) => {
+          return (
+           (index < instruction.length-1) && <p key={index}>{(index < instruction.length-1) ? index+1 : "" }.{data}.</p>
+          )
+        })
+      }
+    </div>   
 
       {id && <Youtube id={id} />}
     </div>

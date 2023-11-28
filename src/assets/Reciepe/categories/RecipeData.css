@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
-    padding-top: 100px;
+    padding-top: 60px;
+    /* background-color: rgba(201, 186, 186, 0.63); */
 }
 
 .recipeDataCnt .data{
@@ -13,28 +14,110 @@
     flex-direction: column;
 }
 
+.recipeDataCnt .data .leftRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 20px;
+}
 
-.recipeDataCnt .data .ingredients{
-    width: 600px;
+.recipeDataCnt .data h1{
+    margin-bottom: 20px;
+}
+ 
+.recipeDataCnt .IdBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.IdBox .catBtn{
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    background-color: var(--primary);
+    font-weight: 600;
+}
+
+.leftRight .left .recipeImg{
+   width: 32vw;
+   /* width: 100%; */
+    /* height: 400px; */
+    margin: 10px 0;
+}
+
+.leftRight .left .recipeImg img{
+    width: 100%;
+    height: 100%;
+}
+
+.leftRight .right{ 
+    display: flex;
+    margin-left: 40px;
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.leftRight .right h2{
+    padding-top: 20px
+}
+
+
+.recipeDataCnt .right .ingredients{
+    /* border-left: 1px solid; */
+    /* width: 600px; */
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative; 
 }
 
 
-.recipeDataCnt .data .ingredient{
+.recipeDataCnt .right .ingredient{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    min-width: 110px;
-    height: 140px;
-    margin: 10px;
-    padding: 2px;
+    flex-direction: column; 
+    flex-wrap: wrap; 
+    margin-left: 15px; 
+    margin-bottom: 15px;
+    padding: 3px;
+    width: 15%;
 }
 
-.recipeDataCnt .data .ingredient img{
-    width: 100px;
-    height: 100px;
+.recipeDataCnt .right .ingredient p{
+    font-size: 0.9rem;
+}
+
+.recipeDataCnt .right .ingredients::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    background-color: black;
+    height: 100%;
+    width: 1px; 
+  }
+
+.recipeDataCnt .right .ingredient img{
+    width: 100%; 
+}
+
+.instructionCnt {
+    margin: 40px 0 ;
+    border-top: 1px solid;
+    width: 100%;
+}
+
+.instructionCnt h2{
+    padding: 0.5rem 0;
+}
+.instructionCnt p{  
+    /* text-align: center; */
+    width: 100%;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
