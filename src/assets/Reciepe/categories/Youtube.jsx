@@ -8,13 +8,19 @@ class Youtube extends React.Component {
     event.target.pauseVideo();
   }
 
+  _onError(event) {
+    console.error('Error initializing YouTube player:', event.data);
+    // Set a fallback image
+    event.target.a.src = 'http://www.themealdb.com/images/ingredients/onion.png';
+  }
+
   render() {
 
-    const { id, additionalOpts } = this.props;
+    const { id} = this.props;
 
     const opts = {
       height: '390',
-      width: '640',
+      width: '540',
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
         autoplay: 1,

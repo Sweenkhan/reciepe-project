@@ -23,7 +23,7 @@
     flex-direction: column;
     width: 270px;
     height: 260px;
-    padding: 5px;
+    padding: 5px 20px;
     margin: 10px 10px 15px;
     border-bottom: 1px solid rgba(82, 74, 74, 0.582);
     border-right: 1px solid rgba(82, 74, 74, 0.582);
@@ -37,6 +37,7 @@
 .choosenCategoryCnt .choosenCat h2 {
     font-size: 1rem;
     padding: 0.6rem 0 0.3rem;
+    text-align: center;
 }
 
 .choosenCategoryCnt .choosenCat .image {
