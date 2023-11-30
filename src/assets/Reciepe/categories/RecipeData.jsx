@@ -43,11 +43,26 @@ function RecipeData() {
 
   function filterInstruction(data){
     let instr = data.instruction.split(".");
-    return instr
+
+    console.log(instr.length)
+    let temp = []
+
+    instr.forEach((el, i) => {
+      if(/^\d/.test(el) || /^\d+\s?/.test(el)){
+        temp.push(el.substring(1).trim())
+        console.log(true)
+    }else{
+      temp.push(el.trim());
+    }
+    });
+    console.log(temp)
+    return temp
   }
 
  let instruction =  filterInstruction(recipeData)
- console.log(instruction)
+//  console.log(instruction)
+
+
 
   return (
     <div className="recipeDataCnt">
