@@ -100,7 +100,7 @@ function RecipeData() {
       { (recipeData.ingredients) &&  
         instruction.map((data, index) => {
           return (
-           (index < instruction.length-1) && <p key={index}>{(index < instruction.length-1) ? index+1 : "" }.{data}.</p>
+           (index < instruction.length-1) && <p key={index}>{(index < instruction.length-1) ? index+1 : "" }. {data}.</p>
           )
         })
       }
