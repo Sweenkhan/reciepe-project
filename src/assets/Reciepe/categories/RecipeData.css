@@ -2,9 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
-    padding-top: 60px;
-    /* background-color: rgba(201, 186, 186, 0.63); */
+    padding: 0;
+    margin: 0;
+    padding-top: 60px; 
+
 }
 
 .recipeDataCnt .data{
@@ -18,7 +19,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px 0 20px;
+    margin: 10px 0 20px;  
+    /* padding: 0 30px; */
 }
 
 .recipeDataCnt .data h1{
@@ -48,6 +50,7 @@
 .leftRight .left .recipeImg img{
     width: 100%;
     height: 100%;
+    
 }
 
 .leftRight .right{ 
@@ -57,7 +60,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 20px
+    margin-top: 40px
 }
   
 
@@ -84,45 +87,59 @@
     flex-wrap: wrap; 
     margin-bottom: 15px;
     padding: 3px;
+    margin: 5px;
     width: 15%;
+}
+
+.recipeDataCnt .right .ingredient:hover{
+    cursor: pointer; 
+    font-weight: 700;
+}
+
+.recipeDataCnt .right .ingredient:hover img{
+    transform: scale(1.1);
 }
 
 .recipeDataCnt .right .ingredient p{
     font-size: 0.9rem;
+    text-align: center;
 }
 
  
 
 .recipeDataCnt .right .ingredient img{
-    width: 100%; 
+    width: 100%;  
+    transition: all 0.5s;
 }
 
 .instructionCnt {
-    margin: 40px 0 ;
-    border-top: 1px solid;
-    width: 100%; 
-    /* background-color: var(--primary); */
+    margin: 40px 0 75px;
+    padding: 0 30PX;
+    border-top: 1px solid; 
     border: none;
     position: relative;
+    background-color: var(--primary); 
 }
 
-.instructionCnt::after{
+/* .instructionCnt::after{
     content: "";
     position: absolute;
     top: 0;
-    left: -26px; 
-    width: 104%;
+    left: 0;
+    width: 100%;
     height: 100%;
     background-color: var(--primary);
     z-index: -1;
-}
+} */
 
 .instructionCnt h2{
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 1rem;
+    color: white;
+    text-transform: uppercase;
 }
 .instructionCnt p{  
     /* text-align: center; */
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: 600; 
 }
