@@ -102,7 +102,7 @@
 
 .recipeDataCnt .right .ingredient p{
     font-size: 0.9rem;
-    text-align: center;
+    text-align: center;  
 }
 
  
@@ -119,6 +119,7 @@
     border: none;
     position: relative;
     background-color: var(--primary); 
+    width: 98vw;
 }
 
 /* .instructionCnt::after{
@@ -138,8 +139,6 @@
     text-transform: uppercase;
 }
 .instructionCnt p{  
-    /* text-align: center; */
-    /* width: 100%; */
     margin-bottom: 8px;
     font-weight: 600; 
 }
