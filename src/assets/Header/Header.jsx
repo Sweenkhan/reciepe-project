@@ -4,12 +4,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 // import logo from "../Images/loogo.png"
 import SearchIcon from "@mui/icons-material/Search";
+import { useContext } from "react";
+import { createContextReciepe } from "../../App";
+import { useNavigate } from "react-router-dom";
+
 
 function Header() {
 
+  const {setSelectedCatagoryData} = useContext(createContextReciepe);
+
   const [showsearchInput, setShowsearchInput] = useState(false)
   const [inputValue, setInputValue] = useState("")
-
+  const navigate = useNavigate()
   // console.log(showsearchInput)
 
 
@@ -18,6 +24,7 @@ function Header() {
   }
 
   function handlonMouseOut(){
+    setInputValue("")
     setShowsearchInput(false)
   }
 
@@ -29,11 +36,20 @@ function Header() {
 
 
 
+  //------------------------------HANDLE RECIEPE DATA SEARCH---------------------------//
+
   useEffect(()=>{
 
-    axios.get(`http://localhost:8000/searchBar/${inputValue}`)
+   inputValue !== "" && axios.get(`http://localhost:8000/searchBar/${inputValue}`)
     .then((result) => {
-         console.log(result.data.status)
+        
+         if(result.data.status === 200){
+          setSelectedCatagoryData(result.data.data)
+          navigate("/choosenCategory")
+         } else {
+           navigate("/")
+         }
+        
     })
 
   },[inputValue])
