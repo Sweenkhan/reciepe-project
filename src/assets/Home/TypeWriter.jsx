@@ -5,7 +5,8 @@ import  Typewriter from "typewriter-effect";
  function TypeWriter() {
    return (
     <span  className="typeWriter"> 
-     Explore the world of <span style={{padding: "0.5rem"}}> </span>
+     Explore the world of
+      {/* <span style={{padding: "0.5rem"}}> </span> */}
      <Typewriter 
      options={{
                   autoStart: true,

@@ -42,19 +42,22 @@
  }
 
 
- .home .typeWriter {
+ .home .typeWriter { 
      padding: 10px;
      margin-top: 5%;
      font-size: 2.9rem;
      color: white;
      position: absolute;
-     top: 5rem;   
+     top: 5rem; 
+     font-weight: 700;
+     text-transform: uppercase;
+
  }
  
 
  .home .mainPageList{ 
     position: absolute;
-     bottom: 3vh;
+     bottom: 5vh;
      left: center;
      width: 334px;
      overflow: hidden; 
@@ -72,7 +75,7 @@
      height: 17rem;   
      width: 100%;
      position: relative;
-     left: 0;
+     left: 0; 
      animation: slidebar 41s 3s infinite;
      padding-top: 0; 
      cursor: pointer;
@@ -115,7 +118,7 @@
     cursor: pointer;
     position: relative;
     z-index: 1;
-    animation: none;
+    animation: none;  
  }
 
 
@@ -132,5 +135,25 @@
 
  
  .home .mainPageList .allcategory .reciepeCnt img{
-    border-radius: 7px;
+    border-radius: 7px; 
+    margin-bottom: 40px;
  }
+
+
+
+
+/*---------------------------RESPONISIVENESS----------------------- */
+
+@media screen and (max-width: 450px){
+
+   
+ .home .typeWriter { 
+   top: 10rem;
+   font-size: 2.4rem;   
+   padding-left: 60px;
+}
+
+   .home .mainPageList{
+      bottom: 15vh;
+   }
+}

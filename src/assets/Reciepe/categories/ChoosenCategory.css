@@ -24,10 +24,10 @@
     width: 270px;
     height: 260px;
     padding: 5px 20px;
-    margin: 10px 10px 15px;
+    margin: 10px 10px 25px;
     border-bottom: 1px solid rgba(82, 74, 74, 0.582);
-    border-right: 1px solid rgba(82, 74, 74, 0.582);
-    border-radius: 5px;
+    border-right: 1px solid rgba(82, 74, 74, 0.582); 
+    border-bottom-right-radius: 5px;
     position: relative;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.26);
