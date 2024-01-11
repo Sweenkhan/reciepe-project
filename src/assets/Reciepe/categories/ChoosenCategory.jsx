@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useContext } from 'react'
 import { createContextReciepe } from '../../../App'
-import RecipeData from './RecipeData'
+// import RecipeData from './RecipeData'
 import "./ChoosenCategory.css"
 import { Link, useNavigate } from 'react-router-dom'
 

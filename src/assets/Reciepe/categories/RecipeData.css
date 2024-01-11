@@ -39,6 +39,12 @@
     border-radius: 3px;
     background-color: var(--primary);
     font-weight: 600;
+    cursor: pointer;
+}
+
+.IdBox .catBtn:hover{
+    color: wheat;
+    opacity: 0.9;
 }
 
 .leftRight .left .recipeImg{

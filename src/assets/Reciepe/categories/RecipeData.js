@@ -1,15 +1,25 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import Youtube from "./Youtube";
 import { createContextReciepe } from "../../../App";
+import Pdfgenerator from "./Pdfgenerator.js";
 import "./RecipeData.css"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
+import axios from "axios";
+
 
 function RecipeData() {
-  const { recipeData } = useContext(createContextReciepe);
+  const { recipeData, setSelectedCatagoryData } = useContext(createContextReciepe); 
+  const [showPdf, setShowPdf] = useState(false);
+
   let navigate = useNavigate()
 
- 
-  console.log(recipeData)
+  let instructionDownload = "hiiiii"
+
+  const handleDownloadClick = () => {
+    setShowPdf(true);
+  };
+
+  
 
   //-----------------------------removing youtube videoId from data------------||
   function filteringId(data) {
@@ -40,7 +50,6 @@ function RecipeData() {
 
 
   //-----------------------setting instruction in an array---------------------||
-
   function filterInstruction(data){
     let instr = data.instruction.split(".");
 
@@ -62,6 +71,22 @@ function RecipeData() {
  let instruction =  filterInstruction(recipeData)
 //  console.log(instruction)
 
+  // instructionDownload = instruction.join(" ")
+
+//--------------------------------------------------click and search----------------------------------------------
+
+function handleFecthData(e, name){
+  e.preventDefault();
+
+  console.log(name)
+  axios.get(`http://localhost:8000/getSelectedCategory/${name}`)
+    .then((result) => { 
+     console.log(result.data.status) 
+     setSelectedCatagoryData(result.data.selectedCatagoryData)
+     navigate("/choosenCategory")
+    })
+
+}
 
 
   return (
@@ -72,7 +97,7 @@ function RecipeData() {
       <h1>{recipeData.reciepeName}</h1>
       
       <div className="IdBox">
-        <p className="catBtn">{recipeData.category}</p>
+        <p className="catBtn" onClick={(e) => {handleFecthData(e, recipeData.category)}} >{recipeData.category}</p>
         <p>{recipeData.mealId}</p>
       </div> 
       <div className="recipeImg">
@@ -105,7 +130,14 @@ function RecipeData() {
         })
       }
     </div>   
-
+    
+    {/* PDF DOWNLOAD SECTION */}
+    <div>
+      <h1>Recipe</h1>
+      <button onClick={handleDownloadClick}>Download PDF</button>
+      {showPdf && <Pdfgenerator instructions={instructionDownload} />}
+    </div>
+    
       {id && <Youtube id={id} />}
     </div>
     </div>

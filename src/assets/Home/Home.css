@@ -111,15 +111,19 @@
 
 
  .home .mainPageList .allcategory .reciepeCnt{
-    background-color: #618264;
-    margin-top: 15px; 
+    background-color: #618264; 
     border-radius: 10px;
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     cursor: pointer;
     position: relative;
     z-index: 1;
     animation: none;  
  }
+
+ /* .home .mainPageList .allcategory .reciepeCnt h2{
+   padd
+ } */
 
 
  .home .mainPageList .allcategory .reciepeCnt:hover{
@@ -135,8 +139,7 @@
 
  
  .home .mainPageList .allcategory .reciepeCnt img{
-    border-radius: 7px; 
-    margin-bottom: 40px;
+    border-radius: 7px;  
  }
 
 
