@@ -1,23 +1,44 @@
 import React, { useContext, useState } from "react";
 import Youtube from "./Youtube";
-import { createContextReciepe } from "../../../App";
-import Pdfgenerator from "./Pdfgenerator.js";
+import { createContextReciepe } from "../../../App"; 
 import "./RecipeData.css"
 import { useNavigate } from "react-router-dom"; 
 import axios from "axios";
+import jsPDF from 'jspdf';
+
 
 
 function RecipeData() {
-  const { recipeData, setSelectedCatagoryData } = useContext(createContextReciepe); 
-  const [showPdf, setShowPdf] = useState(false);
+  const { recipeData, setSelectedCatagoryData } = useContext(createContextReciepe);  
+
 
   let navigate = useNavigate()
-
-  let instructionDownload = "hiiiii"
-
-  const handleDownloadClick = () => {
-    setShowPdf(true);
+ 
+  const downloadPdf = () => {
+    const pdf = new jsPDF();
+    const fontSize = 12;
+    const margin = 10;
+    const pageWidth = pdf.internal.pageSize.getWidth() - 2 * margin;
+  
+    // Set font size
+    pdf.setFontSize(fontSize);
+  
+    // Split text to fit within the page width for measurements
+    const measurementsText = "Measurements: " + measurMents;
+    const splitMeasurements = pdf.splitTextToSize(measurementsText, pageWidth);
+  
+    // Add measurements to the PDF
+    pdf.text(splitMeasurements, margin, 20);
+  
+    // Split text to fit within the page width for instructions
+    const splitInstructions = pdf.splitTextToSize(instruction, pageWidth);
+  
+    // Add instructions to the PDF
+    pdf.text(splitInstructions, margin, 40); // Adjust Y-coordinate based on the height of the measurements section
+  
+    pdf.save('recipe.pdf');
   };
+  
 
   
 
@@ -28,7 +49,6 @@ function RecipeData() {
       return videoId;
     
   }
-
   let id = filteringId(recipeData) 
   
 
@@ -45,8 +65,8 @@ function RecipeData() {
     return filter; 
   }
 
-  let measurMents = filterMeasurMents(recipeData);
-  // console.log(measurMents);
+  let measurMents = filterMeasurMents(recipeData); 
+
 
 
   //-----------------------setting instruction in an array---------------------||
@@ -68,13 +88,19 @@ function RecipeData() {
     return temp
   }
 
- let instruction =  filterInstruction(recipeData)
-//  console.log(instruction)
 
-  // instructionDownload = instruction.join(" ")
+ let instruction =  filterInstruction(recipeData)
+
+//  let dlInstruction = instruction.split("")
+// let data = instruction.map((ele, i) => { 
+//     return i+1 +  " " + ele 
+// })
+
+
+//  console.log(data)
+ 
 
 //--------------------------------------------------click and search----------------------------------------------
-
 function handleFecthData(e, name){
   e.preventDefault();
 
@@ -87,6 +113,7 @@ function handleFecthData(e, name){
     })
 
 }
+
 
 
   return (
@@ -133,9 +160,7 @@ function handleFecthData(e, name){
     
     {/* PDF DOWNLOAD SECTION */}
     <div>
-      <h1>Recipe</h1>
-      <button onClick={handleDownloadClick}>Download PDF</button>
-      {showPdf && <Pdfgenerator instructions={instructionDownload} />}
+    <button onClick={()=>downloadPdf()}>Download PDF</button>
     </div>
     
       {id && <Youtube id={id} />}
