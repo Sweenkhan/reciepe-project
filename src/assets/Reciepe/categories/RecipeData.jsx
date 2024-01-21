@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import Youtube from "./Youtube";
 import { createContextReciepe } from "../../../App"; 
 import "./RecipeData.css"
 import { useNavigate } from "react-router-dom"; 
 import axios from "axios";
 import jsPDF from 'jspdf';
-
+import { useEffect } from "react";
 
 
 function RecipeData() {
@@ -39,67 +39,98 @@ function RecipeData() {
     pdf.save('recipe.pdf');
   };
   
-
-  
-
+ 
   //-----------------------------removing youtube videoId from data------------||
   function filteringId(data) {
-    let filterId = data.youtubeLink.split("=");
-    let videoId =   filterId[1]; 
-      return videoId;
-    
+    try {
+
+      if(data.youtubeLink){
+        let filterId = data.youtubeLink.split("=");
+        let videoId =   filterId[1]; 
+        return videoId;
+      }else {
+        throw new Error("Invalid data: Missing videoId")
+      }
+    } catch(error){
+      // console.error(error.message)
+      navigate("/")
+    }
+      
   }
+
   let id = filteringId(recipeData) 
   
 
   //---------------------------removing measurMents from reciepeData-------------|| 
   function filterMeasurMents(data) {
    
-    let measurMents = data.measurMents;
-    let filter = [];
-    for (let i = 0; i < measurMents.length; i++) {
-      if (measurMents[i] != " ") {
-        filter.push(measurMents[i]);
+    try{
+
+      let measurMents = data.measurMents;
+      let filter = [];
+      if(measurMents){
+        for (let i = 0; i < measurMents.length; i++) {
+        if (measurMents[i] != " ") {
+          filter.push(measurMents[i]);
+        }
       }
+      return filter; 
+    } else {
+      throw new Error("Invalid data: Missing measurements")
     }
-    return filter; 
+  } catch(error){
+    // console.error(error.message);
+    navigate("/");
+    throw error;
+  }
+     
   }
 
-  let measurMents = filterMeasurMents(recipeData); 
+  let measurMents;
 
+  try {
+    measurMents = filterMeasurMents(recipeData);  
+  } catch (error){
+    console.error(error.message)
+  }
 
 
   //-----------------------setting instruction in an array---------------------||
-  function filterInstruction(data){
-    let instr = data.instruction.split(".");
+ // ...
 
-    console.log(instr.length)
-    let temp = []
+function filterInstruction(data) {
+  try {
+    let instr = data.instruction.split(".");
+    let temp = [];
 
     instr.forEach((el, i) => {
-      if(/^\d/.test(el) || /^\d+\s?/.test(el)){
-        temp.push(el.substring(1).trim())
-        console.log(true)
-    }else{
-      temp.push(el.trim());
-    }
+      if (/^\d/.test(el) || /^\d+\s?/.test(el)) {
+        temp.push(el.substring(1).trim());
+        console.log(true);
+      } else {
+        temp.push(el.trim());
+      }
     });
-    console.log(temp)
-    return temp
+
+    return temp;
+  } catch (error) {
+    console.error(error.message);
+    navigate("/");
+    throw error; // rethrow the error to ensure it's caught in the useEffect
   }
+}
 
+let instruction;
 
- let instruction =  filterInstruction(recipeData)
+try {
+  instruction = filterInstruction(recipeData);
+} catch (error) {
+  console.error(error.message);
+}
 
-//  let dlInstruction = instruction.split("")
-// let data = instruction.map((ele, i) => { 
-//     return i+1 +  " " + ele 
-// })
+// ...
 
-
-//  console.log(data)
  
-
 //--------------------------------------------------click and search----------------------------------------------
 function handleFecthData(e, name){
   e.preventDefault();
@@ -115,6 +146,12 @@ function handleFecthData(e, name){
 }
 
 
+useEffect(() => {
+  if (!recipeData.mealId) {
+    navigate("/");
+  }
+}, [recipeData]);
+ 
 
   return (
     <div className="recipeDataCnt">

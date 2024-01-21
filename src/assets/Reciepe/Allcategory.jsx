@@ -38,7 +38,7 @@ function Allcategory() {
   }
 
 
-  console.log(selectedCatagoryData)
+  // console.log(selectedCatagoryData)
  
   return (
     <div className='allcategory'>  

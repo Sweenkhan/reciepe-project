@@ -11,7 +11,6 @@ function ChoosenCategory() {
 
 let navigate = useNavigate()
 const {selectedCatagoryData, setRecipeData} = useContext(createContextReciepe) 
-// console.log(selectedCatagoryData)
 
 
 function handleRecipeData(e, data){
@@ -33,7 +32,7 @@ useEffect(() => {
 
   return (
     <div className='choosenCategory'>  
-
+ 
     <div className='choosenCategoryCnt'> 
      {
         selectedCatagoryData.map((data, index) => {
