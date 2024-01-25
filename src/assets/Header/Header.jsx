@@ -73,7 +73,7 @@ function Header() {
             <Link to="/reciepe">Reciepes</Link>
           </li>
           <li>
-            <Link to="/sign-up">Sign-up</Link>
+            <Link to="/contact-us">Contact</Link>
           </li>
         </ul>
       </div>
