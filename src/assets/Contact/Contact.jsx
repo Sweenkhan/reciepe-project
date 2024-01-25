@@ -32,7 +32,7 @@ function Contact() {
     .then((response) => {
       console.log(response);
     });
-    setFormData(initialFormData);
+    // setFormData(initialFormData);
   }
 
   return (
@@ -40,7 +40,7 @@ function Contact() {
       <div className="formiv">
         <h2>Contact Us</h2>
         <p>We will get back to you asap!</p>
-        <form ons onSubmit={handlSubmit} encType="multipart/form-data">
+        <form ons onSubmit={handlSubmit} >
           <div className="nameDiv">
             <input
               type="text"
