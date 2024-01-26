@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./Contact.css";
-
+import contactImage from "../Images/contact.gif"
 
 function Contact() {
   const initialFormData = {
@@ -37,45 +37,67 @@ function Contact() {
 
   return (
     <div className="contact">
-      <div className="formiv">
+      <div className="wrapper">
+        <h2> How can we help you?</h2>
+        <p>Thank you for your interest. Please use this form to contact us. We will get back to you as soon as we can.</p>
+        <div className="divide">
+        <div className="imageDiv"> 
+         <img src={contactImage} />
+         </div>
+        <form  onSubmit={handlSubmit} >
         <h2>Contact Us</h2>
-        <p>We will get back to you asap!</p>
-        <form ons onSubmit={handlSubmit} >
           <div className="nameDiv">
             <input
+            className="firstName"
               type="text"
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
+              placeholder="First name..."
+              required
             />
             <input
+            className="lastName"
               type="text"
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
+              placeholder="Last name..."
+              required
             />
           </div>
           <input
+          className="email"
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Email"
+            required
           />
           <input
+          className="phone"
             type="number"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
+            placeholder="Mobile"
+            required
           />
           {/* <input type="file" name="file" onChange={handleChange} /> */}
 
           <textarea
+            className="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
+            placeholder="Message"
+            rows={4}
+            required
           />
           <button type="submit">Submit</button>
         </form>
+        </div>
       </div>
     </div>
   );

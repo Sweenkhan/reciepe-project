@@ -1,8 +1,116 @@
+body{
+
+    box-sizing: border-box;
+}
+
 .contact {
    display: flex;
    align-items: center;
    justify-content: center;
-   min-width: 100vw;
-   height: 100vh;
-   padding: 2rem 1rem;
+   min-height: 100vh;
+   padding: 2rem 1rem 1rem; 
+}
+
+
+.contact .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .wrapper h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.contact .wrapper p{
+    font-size: 1.4rem;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact .divide{
+    /* filter: hue-rotate(23deg); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .divide .imageDiv{
+    display: flex;
+    /* width: 100%; */
+}
+
+.contact .divide .imageDiv img{
+    width: 100%;
+}
+
+.contact .divide form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(243, 236, 236);
+    padding: 1.2rem 1rem;
+    /* max-width: 500px; */
+    border-radius: 1.5rem;
+}
+
+.contact .divide form .nameDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .divide form .nameDiv input{
+    width: 48%;
+}
+
+.contact .divide form input, .contact .divide form textarea{
+    padding: 0.2rem;
+    outline-offset: none;
+    outline: none;
+    margin-bottom: 1rem; 
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    border: none;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.contact .divide form input:hover, .contact .divide form textarea:hover{
+    background-color: rgb(250, 250, 250);
+}
+
+
+.divide form button{
+    padding: 0.6rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: #b90023;
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.divide form button:hover{
+    background-color: white;
+    color: #b90023; 
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .contact {
+        padding: 6rem 1rem 1rem; 
+    }
+    .contact .divide{ 
+        flex-direction: column;
+    }
+
 }
