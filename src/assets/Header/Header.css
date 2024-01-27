@@ -43,7 +43,7 @@
      padding: 0;
  }
 
- .formDiv {
+ .headerRight .formDiv {
      display: flex;
      position: relative;
  }
@@ -64,17 +64,16 @@
  .headerRight form .showInput {
      background-color: white;
      width: 270px;
-     transition: all 0.5s;
-     padding: 0 0.5rem;
+     transition: all 0.5s; 
      font-size: 1.2rem;
      outline: none;
+     offset: none;
      height: 100%;
      border-radius: 5px;
+     border: none;
+     padding: 0 0.5rem;
  }
-
- /* .headerRight form input:hover{
- width: 200px;
-} */
+ 
 
  .headerRight form span {
      position: absolute;
@@ -90,24 +89,19 @@
      font-size: 2rem;
      padding: 3px 2px 2px;
  }
-
-
-
+ 
 
  .header .headerUl {
-     display: flex;
-     /* align-items: center; */
+     display: flex; 
      justify-content: space-between;
-     flex-direction: row;
-     margin-right: 10px;
+     flex-direction: row; 
  }
 
 
  .headerUl li {
      border-radius: 4px;
-     list-style-type: none;
-     margin-right: 10px;
-     padding: 5px;
+     list-style-type: none; 
+     padding: 0.4rem;
  }
 
  .headerUl li:hover {
@@ -121,9 +115,51 @@
      text-decoration: none;
      color: white;
      padding: 0 0.5rem;
-     font-size: 1.3rem;
+     font-size: 1.2rem;
  }
 
  .headerUl li:hover a {
      color: var(--primary);
+ }
+
+
+
+
+ @media only screen and (max-width: 800px) {
+    .header .headerRight{ 
+        flex-direction: column;
+        height: 4rem;
+        justify-content: space-between;
+    }
+ 
+    .headerRight form .showInput {
+        background-color: white;
+        width: 150px;
+    }
+    .headerRight form .closeInput {
+        width: 0;
+        padding: 0;
+        /* padding-bottom: 5px; */
+    }
+
+    .headerRight .formDiv{
+        padding-right: 10px;
+        height: 2rem;
+    }
+
+    .headerRight form span{ 
+        /* top: -5px; */
+        padding-bottom: -0.2rem;
+    }
+
+    .headerUl li {
+        margin-right: 2px;
+        padding: 0.3rem;
+    }
+    .headerUl li a{
+        font-size: 1.1rem;
+    } 
+    .headerRight form .search { 
+        padding-bottom: 2px; 
+    }
  }

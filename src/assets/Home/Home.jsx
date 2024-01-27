@@ -13,15 +13,11 @@ function Home() {
 
   
   return (
-    <div className='home' >
-        {/* <h2>How are you sachin</h2> */}
+    <div className='home' > 
         <div className='homeImg' style={backgroundImageStyle}>  </div> 
         
 
-        <Typewriter />
-        {/* <div className='mainPageContent'> 
-        <p>At RECIEPE, we believe that every meal is an opportunity for a delightful adventure. Whether you're a seasoned chef or a novice in the kitchen, our mission is to inspire your inner foodie and elevate your cooking experience. Explore a world of flavors, discover new techniques, and create unforgettable dishes .</p>
-        </div> */}
+        <Typewriter /> 
         <div className='mainPageList'> 
         <Allcategory />
         </div>

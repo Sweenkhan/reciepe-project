@@ -128,18 +128,7 @@
     background-color: var(--primary); 
     width: 98vw;
 }
-
-/* .instructionCnt::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary);
-    z-index: -1;
-} */
-
+ 
 .instructionCnt h2{
     padding: 0.5rem 0 1rem;
     color: white;
@@ -148,4 +137,39 @@
 .instructionCnt p{  
     margin-bottom: 8px;
     font-weight: 600; 
+}
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+   
+    .recipeDataCnt { 
+        padding-top: 100px; 
+    }
+
+    .recipeDataCnt .data .leftRight {
+        flex-direction: column; 
+        padding: 0 10px;
+    }
+
+     
+    .leftRight .left .recipeImg {
+        width: 20rem;
+        margin-bottom: 4rem;
+    }
+
+    .leftRight .right{
+        width: 95%;
+        margin: 0.3rem;
+        padding: 0.3rem;
+    }
+
+    .recipeDataCnt .right .ingredients {
+        margin-left: 0;
+        padding: 0 0.5rem;
+        margin-top: 0;
+    }
 }

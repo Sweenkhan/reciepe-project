@@ -1,5 +1,4 @@
 body{
-
     box-sizing: border-box;
 }
 
@@ -107,7 +106,7 @@ body{
 @media only screen and (max-width: 800px) {
 
     .contact {
-        padding: 6rem 1rem 1rem; 
+        padding: 7rem 1.4rem 1rem;  
     }
     .contact .divide{ 
         flex-direction: column;

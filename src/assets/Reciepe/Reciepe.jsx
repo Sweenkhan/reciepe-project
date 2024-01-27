@@ -5,10 +5,10 @@ import Allcategory from './Allcategory'
 function Reciepe() {
   
   return (
-     <>
-      <h1>how are youy</h1>
+     <div className='reciepeDiv' style={{paddingTop: "40px"}}>
+      <h1></h1>
       <Allcategory />
-     </>
+     </div>
 
   )
 }

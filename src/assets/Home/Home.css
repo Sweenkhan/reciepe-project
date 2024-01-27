@@ -147,16 +147,16 @@
 
 /*---------------------------RESPONISIVENESS----------------------- */
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 550px){
 
    
  .home .typeWriter { 
-   top: 10rem;
-   font-size: 2.4rem;   
+   top: 5rem;
+   font-size: 2rem;   
    padding-left: 60px;
 }
 
    .home .mainPageList{
-      bottom: 15vh;
+      bottom: 2vh;
    }
 }

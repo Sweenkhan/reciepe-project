@@ -92,3 +92,25 @@
     border: 1px solid wheat;
     color: wheat;
 }
+
+
+@media only screen and (max-width: 800px) {
+    .choosenCategory .choosenCategoryCnt {
+        margin-top: 70px;
+    }
+
+    .choosenCategory .choosenCategoryCnt .choosenCat {
+       width: 150px;
+       height: 180px;
+       border: none;
+       margin-bottom: 15px;
+}
+
+.choosenCategory .choosenCategoryCnt .choosenCat .image{
+    width: 150px; 
+    /* width: 100%; */
+}
+.choosenCategory .choosenCategoryCnt .choosenCat h2{
+    font-size: 1rem;
+}
+}
