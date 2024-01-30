@@ -32,7 +32,7 @@ function Contact() {
     .then((response) => {
       console.log(response);
     });
-    // setFormData(initialFormData);
+    setFormData(initialFormData);
   }
 
   return (

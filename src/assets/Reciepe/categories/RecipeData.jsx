@@ -11,7 +11,7 @@ import { useEffect } from "react";
 function RecipeData() {
   const { recipeData, setSelectedCatagoryData } = useContext(createContextReciepe);  
 
-
+  let width = window.innerWidth - (window.innerWidth * (20 / 100))
   let navigate = useNavigate()
  
   const downloadPdf = () => {
@@ -151,7 +151,10 @@ useEffect(() => {
     navigate("/");
   }
 }, [recipeData]);
+
  
+  
+  console.log(window.innerWidth)
 
   return (
     <div className="recipeDataCnt">
@@ -200,7 +203,7 @@ useEffect(() => {
     <button onClick={()=>downloadPdf()}>Download PDF</button>
     </div>
     
-      {id && <Youtube id={id} />}
+      {id && <Youtube id={id} width={width}  />}
     </div>
     </div>
   );
