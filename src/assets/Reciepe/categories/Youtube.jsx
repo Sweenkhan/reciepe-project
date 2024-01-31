@@ -5,19 +5,9 @@ import YouTube from 'react-youtube';
 class Youtube extends React.Component {
   _onReady(event) {
     // access to player in all event handlers via event.target
-    event.target.playeVideo();
+    event.target.playVideo();
   }
-
-  _onError(event) {
  
-    const fallbackImageUrl = 'http://www.themealdb.com/images/ingredients/onion.png';
-
-    if (event.data === 101) { 
-      if (event.target.a) {
-        event.target.a.src = fallbackImageUrl;
-      }
-    }
-  }
 
 
   render() {
@@ -26,10 +16,10 @@ class Youtube extends React.Component {
 
     const opts = {
       width: (width > 800) ? "660" : width ,
-      height: (width > 800) ? "440" : width - (width * (1 / 3)),
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
+      height: (width > 800) ? "440" : width - (width * (1 / 3.3)),
+      playerVars: { 
         autoplay: 1,
+        origin: 'http://localhost:5173',
       },
     };
 
@@ -37,7 +27,7 @@ class Youtube extends React.Component {
 
     return (
       <div>
-        <YouTube videoId={id} opts={opts} onReady={this._onReady} onError={this._onError} />
+        <YouTube videoId={id} opts={opts} onReady={this._onReady}  />
       </div>
     );
   }

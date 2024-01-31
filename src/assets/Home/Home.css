@@ -7,26 +7,33 @@
  /* body{
     background-color: rgb(228, 213, 213); 
  } */
- 
+.homeWrapper{
+   display: flex; 
+   flex-direction: column;
+} 
+
  .home {
      display: flex; 
      position: relative;
      justify-content: center;
      align-items: center;
      padding: 10px;  
-     height: 100vh; 
+     height: 80vh; 
  }
 
 
  .homeImg { 
      width: 100%;
-     height: 91%;
+     height: 86%;
      position: absolute;
      top: 57px; 
      z-index: -2;
      background-position: center;
      background-size: cover;
      background-repeat: no-repeat; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
  }
 
 
@@ -44,22 +51,23 @@
 
  .home .typeWriter { 
      padding: 10px;
-     margin-top: 5%;
+     margin-top: 4%;
      font-size: 2.9rem;
      color: white;
      position: absolute;
-     top: 5rem; 
+     top: 2rem; 
      font-weight: 700;
      text-transform: uppercase;
-
+     z-index: 5;
  }
  
 
  .home .mainPageList{ 
     position: absolute;
-     bottom: 5vh;
+    bottom: 20px;
      left: center;
      width: 334px;
+     height: 240px;
      overflow: hidden; 
      z-index: 100;
      background: transparent;
@@ -76,10 +84,51 @@
      width: 100%;
      position: relative;
      left: 0; 
+     bottom: 0;
      animation: slidebar 41s 3s infinite;
      padding-top: 0; 
      cursor: pointer;
      background: transparent;
+ }
+
+
+
+
+ .homeWrapper .secondSection{
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   height: 500px;
+   margin: 15px 0;
+   background-color: var(--primary);
+}
+.seocndSectionImg{
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size:contain; 
+   width: 100%;
+   height: 100%;  
+   position: relative;
+ }
+
+ .seocndSectionImg::before{
+   content: "";
+   width: 10px;
+   height: 100%;
+   position: absolute;
+   background-color: white;
+   bottom: 0;
+   left: 0; 
+  }
+
+ .seocndSectionImg::after{
+  content: "";
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  background-color: white;
+  bottom: 0;
+  left: 0; 
  }
 
 
@@ -146,17 +195,27 @@
 
 
 /*---------------------------RESPONISIVENESS----------------------- */
-
+@media screen and (max-width: 800px){
+.homeWrapper .secondSection{
+   height: 400px;
+}
+.home .typeWriter {  
+   font-size: 2rem;
+   top: 3rem;
+}
+.home .mainPageList{
+   bottom: -2rem;
+}
+}
 @media screen and (max-width: 550px){
 
-   
  .home .typeWriter { 
    top: 5rem;
    font-size: 2rem;   
-   padding-left: 60px;
+   padding-left: 60px; 
 }
 
-   .home .mainPageList{
-      bottom: 2vh;
+   .homeWrapper .secondSection{
+      height: 300px;
    }
 }

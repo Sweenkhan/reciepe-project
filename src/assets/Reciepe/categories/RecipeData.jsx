@@ -161,7 +161,7 @@ useEffect(() => {
     <div className="data">
     <div className="leftRight">
       <div className="left">
-      <h1>{recipeData.reciepeName}</h1>
+      <h1 style={{fontSize: "1.2rem"}}>{recipeData.reciepeName}</h1>
       
       <div className="IdBox">
         <p className="catBtn" onClick={(e) => {handleFecthData(e, recipeData.category)}} >{recipeData.category}</p>

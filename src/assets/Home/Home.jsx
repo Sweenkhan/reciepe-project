@@ -2,6 +2,7 @@ import React from 'react'
 import Allcategory from '../Reciepe/Allcategory'
 import "./Home.css"
 import main from "../Images/mainImg.avif"
+import secondMain from "../Images/secondMain.png"
 // import Typewriter from "typewriter-effect"
 import Typewriter from './TypeWriter.jsx'
 
@@ -13,6 +14,9 @@ function Home() {
 
   
   return (
+    <div className='homeWrapper'>
+
+    
     <div className='home' > 
         <div className='homeImg' style={backgroundImageStyle}>  </div> 
         
@@ -21,6 +25,11 @@ function Home() {
         <div className='mainPageList'> 
         <Allcategory />
         </div>
+    </div>
+    <div className='secondSection'>
+    {/* <img src={secondMain} alt='section' /> */}
+    <div style={{backgroundImage: `url(${secondMain})`}} className='seocndSectionImg'></div>
+    </div>
     </div>
   )
 }

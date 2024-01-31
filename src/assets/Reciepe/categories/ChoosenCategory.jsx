@@ -33,6 +33,7 @@ useEffect(() => {
   return (
     <div className='choosenCategory'>  
  
+    <h1 style={{textAlign: "center", paddingTop: "80px"}} > Select Any Reciepe</h1>
     <div className='choosenCategoryCnt'> 
      {
         selectedCatagoryData.map((data, index) => {
