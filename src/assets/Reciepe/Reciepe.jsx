@@ -9,8 +9,8 @@ function Reciepe() {
       <h1 style={{textAlign: "center"}}> Choose your category </h1>
       <Allcategory />
      </div>
-
   )
+  
 }
 
 export default Reciepe

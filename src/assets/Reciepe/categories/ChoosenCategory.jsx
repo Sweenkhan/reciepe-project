@@ -19,7 +19,6 @@ function handleRecipeData(e, data){
    console.log(data)
    navigate("/recipeData")
 }
-
  
 
 useEffect(() => {
@@ -35,6 +34,7 @@ useEffect(() => {
  
     <h1 style={{textAlign: "center", paddingTop: "80px"}} > Select Any Reciepe</h1>
     <div className='choosenCategoryCnt'> 
+    
      {
         selectedCatagoryData.map((data, index) => {
             return (

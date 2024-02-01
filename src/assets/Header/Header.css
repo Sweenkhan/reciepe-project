@@ -10,7 +10,7 @@
      justify-content: space-between;
      align-items: center;
      flex-direction: row;
-     padding: 0.5rem;
+     padding: 0.5rem 5rem;
      color: white;
      font: 1.1rem sans-serif;
      font-family: Arial, Helvetica, sans-serif;
@@ -126,6 +126,10 @@
 
 
  @media only screen and (max-width: 800px) {
+
+    .header{
+        padding: 0.5rem 1.5rem;
+    }
     .header .headerRight{ 
         flex-direction: column;
         height: 4rem;

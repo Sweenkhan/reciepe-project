@@ -39,7 +39,7 @@ function Contact() {
     }).catch((error) => {
        toast.error(error)
     })
-    // setFormData(initialFormData);
+    setFormData(initialFormData);
   }
 
   return (

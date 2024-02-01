@@ -20,20 +20,16 @@ function RecipeData() {
     const margin = 10;
     const pageWidth = pdf.internal.pageSize.getWidth() - 2 * margin;
   
-    // Set font size
+ 
     pdf.setFontSize(fontSize);
-  
-    // Split text to fit within the page width for measurements
+   
     const measurementsText = "Measurements: " + measurMents;
     const splitMeasurements = pdf.splitTextToSize(measurementsText, pageWidth);
   
-    // Add measurements to the PDF
     pdf.text(splitMeasurements, margin, 20);
   
-    // Split text to fit within the page width for instructions
     const splitInstructions = pdf.splitTextToSize(instruction, pageWidth);
-  
-    // Add instructions to the PDF
+   
     pdf.text(splitInstructions, margin, 40); // Adjust Y-coordinate based on the height of the measurements section
   
     pdf.save('recipe.pdf');
