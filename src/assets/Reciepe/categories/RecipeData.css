@@ -120,7 +120,7 @@
     border: none;
     position: relative;
     background-color: var(--primary); 
-    width: 98vw;
+    width: 100vw;
 }
  
 .instructionCnt h2{
@@ -132,7 +132,6 @@
     margin-bottom: 8px;
     font-weight: 300; 
     color: white;
-     
 }
 
 
