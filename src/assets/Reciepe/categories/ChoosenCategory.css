@@ -98,6 +98,10 @@
 
 
 @media only screen and (max-width: 800px) {
+
+    .choosenCategory{
+        padding-top: 30px;
+    }
    
     .choosenCategory .choosenCategoryCnt .choosenCat {
        width: 150px;

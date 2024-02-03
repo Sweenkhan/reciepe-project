@@ -2,7 +2,7 @@ body{
     box-sizing: border-box;
 }
 
-.contact {
+.contactPage {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -14,28 +14,28 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 
 
-.contact .wrapper{
+.contactPage .wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.contact .wrapper h2{
+.contactPage .wrapper h2{
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
     line-height: 2rem;
 }
 
-.contact .wrapper p{
+.contactPage .wrapper p{
     font-size: 1.4rem;
     width: 65%;
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.contact .divide{
+.contactPage .divide{
     /* filter: hue-rotate(23deg); */
     display: flex;
     align-items: center;
@@ -43,16 +43,16 @@ font-family: 'Roboto Condensed', sans-serif;
     
 }
 
-.contact .divide .imageDiv{
+.contactPage .divide .imageDiv{
     display: flex;
     /* width: 100%; */
 }
 
-.contact .divide .imageDiv img{
+.contactPage .divide .imageDiv img{
     width: 100%;
 }
 
-.contact .divide form{
+.contactPage .divide form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,16 +63,16 @@ font-family: 'Roboto Condensed', sans-serif;
     border-radius: 1.5rem;
 }
 
-.contact .divide form .nameDiv{
+.contactPage .divide form .nameDiv{
     display: flex;
     justify-content: space-between;
 }
 
-.contact .divide form .nameDiv input{
+.contactPage .divide form .nameDiv input{
     width: 48%;
 }
 
-.contact .divide form input, .contact .divide form textarea{
+.contactPage .divide form input, .contactPage .divide form textarea{
     padding: 0.2rem;
     outline-offset: none;
     outline: none;
@@ -84,7 +84,7 @@ font-family: 'Roboto Condensed', sans-serif;
     width: 100%;
 }
 
-.contact .divide form input:hover, .contact .divide form textarea:hover{
+.contactPage .divide form input:hover, .contactPage .divide form textarea:hover{
     background-color: rgb(250, 250, 250);
 }
 
@@ -109,10 +109,10 @@ font-family: 'Roboto Condensed', sans-serif;
 
 @media only screen and (max-width: 800px) {
 
-    .contact {
+    .contactPage {
         padding: 7rem 1.4rem 1rem;  
     }
-    .contact .divide{ 
+    .contactPage .divide{ 
         flex-direction: column;
     }
 

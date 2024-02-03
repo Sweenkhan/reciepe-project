@@ -8,7 +8,7 @@ import Allcategory from "./assets/Reciepe/Allcategory";
 import ChoosenCategory from "./assets/Reciepe/categories/ChoosenCategory.jsx";
 import RecipeData from "./assets/Reciepe/categories/RecipeData.jsx";
 import Contact from "./assets/Contact/Contact.jsx";
- 
+import Footer from "./assets/Footer/Footer.jsx";
 
 export const createContextReciepe = createContext({});
 
@@ -44,6 +44,7 @@ function App() {
              <Route path="/recipeData" element={<RecipeData />}></Route> 
              <Route path="/contact-us" element={<Contact />} ></Route>
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     </createContextReciepe.Provider>

@@ -43,7 +43,7 @@ function Contact() {
   }
 
   return (
-    <div className="contact">
+    <div className="contactPage">
       <div className="wrapper">
         <h2> How can we help you?</h2>
         <p>
