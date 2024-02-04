@@ -8,6 +8,7 @@ import axios from "axios";
 import { createContextReciepe } from "../../App.jsx";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import urlLink from "../url/url.js";
 
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
 
 // most pupolar reciepes fetching from mongodb
 useEffect(() => {
-   axios.get("http://localhost:8000/mostPopular")
+   axios.get(`${urlLink}/mostPopular`)
    .then((result) => {
       console.log(result.data.mostPopularReciepes)
       setMostPopular(result.data.mostPopularReciepes)

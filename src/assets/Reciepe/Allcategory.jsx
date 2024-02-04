@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { createContextReciepe } from '../../App';
 import {useNavigate } from 'react-router-dom';
 import "./Allcategory.css"
+import urlLink from '../url/url';
 
 function Allcategory() {
 
@@ -14,9 +15,8 @@ function Allcategory() {
 
   //-------------------------------------------FETCHING DATA FROM API BY CATEGORY--------------------------// 
   useEffect(() => { 
-    axios.get("http://localhost:8000/getAllCategory")
-      .then((result) => { 
-      //  console.log(result.data.allCategory)
+    axios.get(`${urlLink}/getAllCategory`)
+      .then((result) => {  
        setAllCategoryData(result.data.allCategory)
       })
 
@@ -28,7 +28,7 @@ function Allcategory() {
     e.preventDefault();
 
     console.log(name)
-    axios.get(`http://localhost:8000/getSelectedCategory/${name}`)
+    axios.get(`${urlLink}/getSelectedCategory/${name}`)
       .then((result) => { 
        console.log(result.data.status) 
        setSelectedCatagoryData(result.data.selectedCatagoryData)
@@ -36,9 +36,7 @@ function Allcategory() {
       })
 
   }
-
-
-  // console.log(selectedCatagoryData)
+ 
  
   return (
     <div className='allcategory'>  

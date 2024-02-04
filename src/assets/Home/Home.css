@@ -224,6 +224,7 @@
    bottom: 0;
    box-shadow: 5px 5px 10px;
    padding-left: 10px; 
+   overflow: hidden;
    animation: popular 2s 0s ease-in-out;
  }
 

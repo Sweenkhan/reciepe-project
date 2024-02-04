@@ -4,6 +4,8 @@ import "./Contact.css";
 import contactImage from "../Images/contact.gif";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import urlLink from "../url/url.js";
+
 
 function Contact() {
   const initialFormData = {
@@ -28,7 +30,7 @@ function Contact() {
     e.preventDefault();
 
     console.log(formData);
-    axios.post("http://localhost:8000/contact", formData)
+    axios.post(`${urlLink}/contact`, formData)
     .then((response) => {
       console.log(response);
       if(response.data.status === 200){

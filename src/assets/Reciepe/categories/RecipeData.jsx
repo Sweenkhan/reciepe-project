@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import jsPDF from 'jspdf';
 import { useEffect } from "react";
-
+import urlLink from "../../url/url";
 
 function RecipeData() {
   const { recipeData, setSelectedCatagoryData } = useContext(createContextReciepe);  
@@ -132,7 +132,7 @@ function handleFecthData(e, name){
   e.preventDefault();
 
   console.log(name)
-  axios.get(`http://localhost:8000/getSelectedCategory/${name}`)
+  axios.get(`${urlLink}/${name}`)
     .then((result) => { 
      console.log(result.data.status) 
      setSelectedCatagoryData(result.data.selectedCatagoryData)

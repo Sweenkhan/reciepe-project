@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
-// import logo from "../Images/loogo.png"
+import urlLink from "../url/url";
 import SearchIcon from "@mui/icons-material/Search";
 import { useContext } from "react";
 import { createContextReciepe } from "../../App";
@@ -40,7 +40,7 @@ function Header() {
 
   useEffect(()=>{
 
-   inputValue !== "" && axios.get(`http://localhost:8000/searchBar/${inputValue}`)
+   inputValue !== "" && axios.get(`${urlLink}/searchBar/${inputValue}`)
     .then((result) => {
         
          if(result.data.status === 200){
