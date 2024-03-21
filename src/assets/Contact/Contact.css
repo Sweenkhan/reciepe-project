@@ -9,8 +9,7 @@ body{
    min-height: 100vh;
    padding: 5rem 1rem 1rem; 
    font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;
-
+font-family: 'Roboto Condensed', sans-serif; 
 }
 
 
@@ -35,8 +34,7 @@ font-family: 'Roboto Condensed', sans-serif;
     margin-bottom: 2rem;
 }
 
-.contactPage .divide{
-    /* filter: hue-rotate(23deg); */
+.contactPage .divide{ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,8 +55,7 @@ font-family: 'Roboto Condensed', sans-serif;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(243, 236, 236);
-    /* background-color: var(--primary); */
+    background-color: rgb(243, 236, 236); 
     padding: 1.2rem ; 
     border-radius: 1.5rem;
 }

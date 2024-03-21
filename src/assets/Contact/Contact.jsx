@@ -95,9 +95,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Mobile"
               required
-            />
-            {/* <input type="file" name="file" onChange={handleChange} /> */}
-
+            /> 
             <textarea
               className="message"
               name="message"
