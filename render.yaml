@@ -1,0 +1,22 @@
+services:
+  - name: web
+    type: web
+    env: node
+    buildCommand: npm run build
+    startCommand: npm run start
+
+routes:
+  - src: /
+    dest: /public
+
+automatic_scaling:
+  - type: http
+    minInstances: 1
+    maxInstances: 10
+    initialInstanceCount: 1
+
+# Add-ons (optional)
+# addons:
+#   - type: postgres
+#     name: database
+#     env: production
